@@ -1,0 +1,33 @@
+.home{
+    height: 100vh;
+    background-image: url(../../utils/images/sunrise_descop.jpg);
+    background-size: cover;
+    &__overlay{
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.35);
+    }
+    &__title{
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+    }
+    &__welcome{
+        width: 100%;
+        text-align: center;
+        color: rgb(255, 255, 255);
+        font-size: 20px;
+    }
+    &__description{
+        display: block;
+    }
+    &__subtitle{
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+        color: white;
+        font-size: 15px;
+    }
+    
+}

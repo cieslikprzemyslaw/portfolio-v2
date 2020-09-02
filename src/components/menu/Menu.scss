@@ -1,0 +1,17 @@
+.menu{
+    padding: 5px 0;
+   width: 100wv;
+    &__list{
+        display: flex;
+        justify-content: space-around;
+        align-content: flex-start;
+    }
+    &__item{
+        list-style: none;
+        
+    }
+    &__link{
+        text-decoration: none;
+        color: #ffffff;
+    }
+}

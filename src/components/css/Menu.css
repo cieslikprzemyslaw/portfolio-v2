@@ -1,0 +1,24 @@
+.menu {
+  padding: 5px 0;
+  width: 100wv;
+}
+
+.menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+}
+
+.menu__item {
+  list-style: none;
+}
+
+.menu__link {
+  text-decoration: none;
+  color: #ffffff;
+}
+/*# sourceMappingURL=Menu.css.map */
