@@ -1,0 +1,42 @@
+.skills{
+    &__image{
+        background-image: url(../../utils/images/technology-mobile.jpg);
+        width: 100%;
+        height: 290px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    &__overlay{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: #000000, $alpha: 0.5);
+    }
+    &__title{
+        position: absolute;
+        bottom: 20px;
+        left: 10px;
+        font-size: 25px;
+        color: white;
+    }
+    &__description{
+        min-height: 30vh;
+        // min-height: max-content; //TODO Ask about UX in that lines of code. Free space or icons under Header then going down? 
+        margin: 20px 0;
+    }
+    &__icon-title{
+        text-align: center;
+        font-size: 20px;
+    }
+    &__icon-description{
+        font-size: 15px;
+        margin: 20px;
+    }
+    &__icons{
+        margin-bottom: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: space-around;
+    }
+}

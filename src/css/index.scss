@@ -1,3 +1,5 @@
-@import './reset.scss';
-@import './variables';
-@import '../components/menu/Menu.scss'
+@import './_reset.scss';
+@import '../_App.scss';
+@import './_variables';
+@import '../components/menu/_Menu.scss';
+@import '../pages/Skills/skills';

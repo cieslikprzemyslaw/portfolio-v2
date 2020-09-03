@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './Home.scss';
+import './_Home.scss';
 
 import Menu from '../../components/menu/Menu';
 
