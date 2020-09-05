@@ -12,8 +12,9 @@
 }
 
 .menu {
+  position: fixed;
   padding: 5px 0;
-  width: 100wv;
+  width: 100%;
 }
 
 .menu__list {
@@ -74,6 +75,9 @@
 }
 
 .skills__icons {
+  max-height: -webkit-max-content;
+  max-height: -moz-max-content;
+  max-height: max-content;
   margin-bottom: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -84,5 +88,143 @@
       justify-content: space-around;
   -ms-flex-line-pack: distribute;
       align-content: space-around;
+}
+
+.skills__description-null {
+  text-align: center;
+}
+
+.projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  overflow-x: hidden;
+}
+
+.projects__image {
+  background-image: url(../../utils/images/technology-mobile.jpg);
+  width: 100%;
+  height: 290px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.projects__overlay {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.projects__title {
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+  font-size: 25px;
+  color: white;
+}
+
+.projects__slider {
+  margin: 20px 0;
+  position: relative;
+}
+
+.projects__description {
+  margin: 20px 0;
+}
+
+.projects__main-image {
+  position: relative;
+  border: 2px solid black;
+  border-radius: 50px;
+  z-index: 1;
+}
+
+.projects__title-slider {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.projects__description-slider {
+  margin: 0 5px;
+}
+
+.projects__dots {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
+}
+
+.projects__dot {
+  height: 25px;
+  width: 25px;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.projects__dot--active {
+  height: 30px;
+  width: 30px;
+}
+
+.projects__arrow-right {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  text-align: center;
+  width: 25%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+
+.projects__arrow-left {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 25%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+  text-align: center;
+}
+
+.about__image {
+  background-image: url(../../utils/images/about-mobile.jpg);
+  width: 100%;
+  height: 290px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.about__overlay {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.about__title {
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+  font-size: 25px;
+  color: white;
+}
+
+.about__description {
+  margin: 20px 5px;
+  text-align: justify;
 }
 /*# sourceMappingURL=index.css.map */

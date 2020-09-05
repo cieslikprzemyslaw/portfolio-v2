@@ -1,0 +1,26 @@
+.about{
+    &__image{
+        background-image: url(../../utils/images/about-mobile.jpg);
+        width: 100%;
+        height: 290px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    &__overlay{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: #000000, $alpha: 0.5);
+    }
+    &__title{
+        position: absolute;
+        bottom: 20px;
+        left: 10px;
+        font-size: 25px;
+        color: white;
+    }
+    &__description{
+        margin: 20px 5px;
+        text-align: justify;
+    }
+}

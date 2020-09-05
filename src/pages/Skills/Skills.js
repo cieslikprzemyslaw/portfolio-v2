@@ -116,7 +116,7 @@ const Skills = () => {
             </section>
             <section className="skills__section">
                 <section className="skills__description">
-                    {isClicked ? showTechnologyDescription() : null}
+                    {isClicked ? showTechnologyDescription() : <p className="skills__description-null">Please click on a Icon</p>}
                 </section>
                 <section className="skills__icons">
                     {technologyStack.map(skill => {

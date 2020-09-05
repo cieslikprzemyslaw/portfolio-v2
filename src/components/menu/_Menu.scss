@@ -1,6 +1,7 @@
 .menu{
+    position: fixed;
     padding: 5px 0;
-   width: 100wv;
+   width: 100%;
     &__list{
         display: flex;
         justify-content: space-around;

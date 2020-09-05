@@ -21,7 +21,6 @@
     }
     &__description{
         min-height: 30vh;
-        // min-height: max-content; //TODO Ask about UX in that lines of code. Free space or icons under Header then going down? 
         margin: 20px 0;
     }
     &__icon-title{
@@ -33,10 +32,14 @@
         margin: 20px;
     }
     &__icons{
+        max-height: max-content;
         margin-bottom: 20px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
         align-content: space-around;
+    }
+    &__description-null{
+        text-align: center;
     }
 }
