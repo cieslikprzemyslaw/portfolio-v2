@@ -3,6 +3,10 @@ import React from 'react';
 import Menu from '../../components/menu/Menu';
 import './_contact.scss';
 
+import { TextField, Button } from '@material-ui/core';
+import Icon from '@mdi/react'
+import { mdiFacebook, mdiGithub, mdiLinkedin, mdiCellphoneAndroid } from '@mdi/js';
+
 const Contact = () => {
     return (
         <div className="contact">
@@ -16,17 +20,53 @@ const Contact = () => {
             </section>
             <section className="contact__info">
                 <h2 className="contact__subtitle">
-
+                    Want to get in touch?
                 </h2>
-                <form action="">
-                    <label htmlFor="">name</label>
-                    <input type="text" name="" id="" />
-                    <label htmlFor="">email</label>
-                    <input type="email" name="" id=""/>
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
-                    <button type="submit">Send</button>
+                <form action="mailto:cprzemek91@hotmail.com" method="post" encType="text/plain" className="contact__form">
+                    <TextField
+                        htmlFor="name"
+                        style={{ width: "100%" }} id="standard-basic" label="name" />
+                    <TextField
+                        htmlFor="e-mail"
+                        style={{ width: "100%" }} id="standard-basic" label="e-mail" />
+                    <TextField
+                        htmlFor="text"
+                        style={{ margin: "20px auto", width: "100%" }}
+                        id="outlined-multiline-static"
+                        label="Text"
+                        multiline
+                        rows={5}
+                        variant="outlined"
+                    />
+                    <Button variant="contained" color="primary"
+                        type="submit">Send</Button>
                 </form>
-                {/* //add icons */}
+                <section className="contact__icons">
+                    <a href="https://www.facebook.com/profile.php?id=100000375258188">
+                        <Icon
+                            path={mdiFacebook}
+                            title="Facebook"
+                            size={3}
+                            color="#14A0F9"
+                        />
+                    </a>
+                    <a href="https://github.com/cieslikprzemyslaw">
+                        <Icon
+                            path={mdiGithub}
+                            title="Github"
+                            size={3}
+                            color="#000000"
+                        />
+                    </a>
+                    <a href="https://www.linkedin.com/in/przemyslaw-cieslik-b90457169/">
+                        <Icon
+                            path={mdiLinkedin}
+                            title="Linkedin"
+                            size={3}
+                            color="#006FAB"
+                        />
+                    </a>
+                </section>
             </section>
         </div>
     );
