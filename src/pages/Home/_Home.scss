@@ -28,8 +28,7 @@
     &__description{
         display: block;
         &--change{
-            animation: changeTitle 4s linear infinite;
-            animation-delay: 1s;
+            opacity: 1;
         }    
     }
     &__subtitle{

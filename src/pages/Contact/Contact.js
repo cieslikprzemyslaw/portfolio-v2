@@ -5,7 +5,7 @@ import './_contact.scss';
 
 import { TextField, Button } from '@material-ui/core';
 import Icon from '@mdi/react'
-import { mdiFacebook, mdiGithub, mdiLinkedin, mdiCellphoneAndroid } from '@mdi/js';
+import { mdiFacebook, mdiGithub, mdiLinkedin } from '@mdi/js';
 
 const Contact = () => {
     return (
