@@ -64,14 +64,14 @@ const Projects = () => {
             <main className="projects__slider">
                 <section className="projects__arrow-right" onClick={handleClickRight}>
                 <Icon
-                                size={4}
+                                size={3}
                                 style={{color: "white"}}
                                 path={mdiArrowRightThick}
                             />
                 </section>
                 <section className="projects__arrow-left" onClick={handleClickLeft}>
                 <Icon
-                                size={4}
+                                size={3}
                                 style={{color: "white"}}
                                 path={mdiArrowLeftThick}
                             />

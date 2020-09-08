@@ -1,4 +1,10 @@
 .home{
+    @keyframes changeTitle {
+        0%{opacity: 0;}
+        15%{opacity: 1;}
+        85%{opacity: 1;}
+        100%{opacity: 0;}
+    }
     height: 100vh;
     background-image: url(../../utils/images/sunrise_descop.jpg);
     background-size: cover;
@@ -21,6 +27,10 @@
     }
     &__description{
         display: block;
+        &--change{
+            animation: changeTitle 4s linear infinite;
+            animation-delay: 1s;
+        }    
     }
     &__subtitle{
         width: 100%;
@@ -29,5 +39,14 @@
         color: white;
         font-size: 20px;
     }
+    &__loader{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0,0,0,0.5);
+        height: 100vh;
+        width: 100vw;
+    }
     
 }
+
