@@ -1,4 +1,5 @@
 .menu{
+    z-index: 99;
     position: fixed;
     padding: 5px 0;
    width: 100%;
@@ -14,5 +15,13 @@
     &__link{
         text-decoration: none;
         color: #ffffff;
+        translate: 1s;
+        &:hover{
+            font-size: 1.2em;
+            border-bottom: 2px solid white;
+        }
+        &.active{
+            color: teal;
+        }
     }
 }
