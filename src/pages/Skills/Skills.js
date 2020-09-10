@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 import './_skills.scss';
 import Menu from '../../components/menu/Menu';
 
 import Icon from '@mdi/react'
 import { mdiLanguageHtml5, mdiLanguageCss3, mdiLanguageJavascript, mdiReact, mdiNpm, mdiGit, mdiMaterialUi } from '@mdi/js';
+import { gsap } from "gsap";
 
 const technologyStack = [
     {
@@ -85,6 +86,16 @@ const technologyStack = [
 const Skills = () => {
     const [isClicked, setIsClicked] = useState(false);
     const [index, setIndex] = useState(null);
+    const page = useRef(null);
+
+    useEffect(()=> {
+        gsap.from(page.current,{            
+                ease: "circ",
+                left: 0,
+                xPercent: 100,
+                duration:0.3,           
+        })
+    });
 
     const handleClick = (id) => {
         setIsClicked(true)
@@ -105,7 +116,7 @@ const Skills = () => {
 
 
     return (
-        <div className="skills">
+        <div className="skills" ref={page}>
             <section className="skills__image">
                 <section className="skills__overlay">
                     <Menu />

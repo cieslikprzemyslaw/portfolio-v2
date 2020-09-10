@@ -1,10 +1,11 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 import Menu from '../../components/menu/Menu';
 import './_projects.scss';
 
 import Icon from '@mdi/react'
 import { mdiArrowRightThick, mdiArrowLeftThick } from '@mdi/js';
+import { gsap } from "gsap";
 
 const projectsArray = [
     {
@@ -39,7 +40,16 @@ const projectsArray = [
 const Projects = () => {
     const [index, setIndex] = useState(0)
     const active = useRef(1)
+    const page = useRef(null);
     
+    useEffect(()=> {
+        gsap.from(page.current,{            
+                ease: "circ",
+                left: 0,
+                xPercent: 100,
+                duration:0.3,           
+        })
+    });
 
     const handleClickRight = () => {
         setIndex(index => index + 1);
@@ -52,12 +62,12 @@ const Projects = () => {
     }
 
     return (
-        <div className="projects">
+        <div className="projects" ref={page}>
             <section className="projects__image">
                 <section className="projects__overlay">
                     <Menu />
                     <h1 className="projects__title">
-                        Technology Stack
+                        Projects
                     </h1>
                 </section>
             </section>

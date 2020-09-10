@@ -26,7 +26,7 @@ const Home = () => {
             opacity: 0,
             ease: 'none',
         })
-        const intervalIndex = setInterval(changeTitles, 4000)
+        const intervalIndex = setInterval(changeTitles, 3000)
         return function clear() {
             clearInterval(intervalIndex)
         };
