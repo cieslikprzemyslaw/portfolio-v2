@@ -1,8 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './_Home.scss';
 
-import Menu from '../../components/menu/Menu';
-
 import { gsap } from "gsap";
 
 const titles = ['I am Junior Javascript Developer', 'I am Junior Front End Developer', 'I am Junior React Developer']
@@ -37,10 +35,9 @@ const Home = () => {
     return (
         <div className="home">
             <section className="home__overlay">
-                <Menu />
                 <section className="home__title" >
-                    <h1 className={"home__welcome"} >Welcome</h1>
-                    <h2 className="home__subtitle"><span className="home__description">My name is Przemyslaw Cieslik</span>
+                    <h1 className={"home__welcome"} >Hi!</h1>
+                    <h2 className="home__subtitle"><span className="home__description">I am Przemyslaw Cieslik</span>
                     <span className="home__description home__description--change" ref={animate}>{titles[titlesIndex]}</span> 
                     </h2>
                 </section>

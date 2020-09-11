@@ -7,11 +7,13 @@ import Skills from './pages/Skills/Skills';
 import Projects from './pages/Projects/';
 import About from './pages/About/About';
 import Contact from './pages/Contact/Contact';
+import Menu from './components/menu/Menu';
 
 function App() {
   return (
     <div className="App">
       <Router>
+      <Menu />
         <section>
           <Route path="/" exact component={Home}/>
           <Route path="/skills" exact component={Skills}/>

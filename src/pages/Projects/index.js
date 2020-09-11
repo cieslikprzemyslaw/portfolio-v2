@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 
-import Menu from '../../components/menu/Menu';
 import './_projects.scss';
 
 import Icon from '@mdi/react'
@@ -39,33 +38,34 @@ const projectsArray = [
 
 const Projects = () => {
     const [index, setIndex] = useState(0)
-    const active = useRef(1)
+    const [isActivePage, setIsActivePage] = useState(true);
     const page = useRef(null);
-    
-    useEffect(()=> {
-        gsap.from(page.current,{            
-                ease: "circ",
-                left: 0,
-                xPercent: 100,
-                duration:0.3,           
-        })
+
+    useEffect(() => {
+        if(isActivePage){
+            gsap.from(page.current, {
+                ease: "none",
+                opacity:0,
+                duration: 0.5,
+            })
+            setIsActivePage(false)
+        }
     });
 
     const handleClickRight = () => {
         setIndex(index => index + 1);
-        if(index === projectsArray.length - 1) return setIndex(0);
+        if (index === projectsArray.length - 1) return setIndex(0);
     }
 
     const handleClickLeft = () => {
         setIndex(index => index - 1);
-        if(index === 0) return setIndex(projectsArray.length - 1);
+        if (index === 0) return setIndex(projectsArray.length - 1);
     }
 
     return (
-        <div className="projects" ref={page}>
+        <div className="projects" ref={isActivePage ? page:null}>
             <section className="projects__image">
                 <section className="projects__overlay">
-                    <Menu />
                     <h1 className="projects__title">
                         Projects
                     </h1>
@@ -73,18 +73,18 @@ const Projects = () => {
             </section>
             <main className="projects__slider">
                 <section className="projects__arrow-right" onClick={handleClickRight}>
-                <Icon
-                                size={3}
-                                style={{color: "white"}}
-                                path={mdiArrowRightThick}
-                            />
+                    <Icon
+                        size={2}
+                        style={{ color: "white" }}
+                        path={mdiArrowRightThick}
+                    />
                 </section>
                 <section className="projects__arrow-left" onClick={handleClickLeft}>
-                <Icon
-                                size={3}
-                                style={{color: "white"}}
-                                path={mdiArrowLeftThick}
-                            />
+                    <Icon
+                        size={2}
+                        style={{ color: "white" }}
+                        path={mdiArrowLeftThick}
+                    />
                 </section>
                 <img className="projects__main-image" src={projectsArray[index].imgUrl} alt={projectsArray[index].name} style={{ width: "100%" }} />
                 <section className="projects__description">
@@ -92,11 +92,6 @@ const Projects = () => {
                     <p className="projects__description-slider">{projectsArray[index].description}</p>
                 </section>
             </main>
-            <section className="projects__dots">{projectsArray.map(dot => {
-                    return (
-                        <p className="projects__dot" key={dot.id} value={dot.id}></p>
-                    )
-                })}</section>
         </div>
     );
 };

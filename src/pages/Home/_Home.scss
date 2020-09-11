@@ -1,7 +1,10 @@
 .home{
     height: 100vh;
-    background-image: url(../../utils/images/sunrise_descop.jpg);
+    background-image: url(../../utils/images/glasgow_mobile.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
     &__overlay{
         height: 100vh;
         background-color: rgba(0, 0, 0, 0.35);

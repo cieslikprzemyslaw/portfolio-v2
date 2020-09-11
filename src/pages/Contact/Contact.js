@@ -1,6 +1,5 @@
 import React, {useRef, useEffect} from 'react';
 
-import Menu from '../../components/menu/Menu';
 import './_contact.scss';
 
 import { TextField, Button } from '@material-ui/core';
@@ -12,11 +11,10 @@ const Contact = () => {
     const page = useRef(null);
 
     useEffect(()=> {
-        gsap.from(page.current,{            
-                ease: "circ",
-                left: 0,
-                xPercent: 100,
-                duration:0.3,           
+        gsap.from(page.current, {
+            ease: "none",
+            opacity:0,
+            duration: 0.5,
         })
     });
 
@@ -24,7 +22,6 @@ const Contact = () => {
         <div className="contact" ref={page}>
             <section className="contact__image">
                 <section className="contact__overlay">
-                    <Menu />
                     <h1 className="contact__title">
                         Contact
                     </h1>

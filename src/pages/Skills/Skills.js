@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 
 import './_skills.scss';
-import Menu from '../../components/menu/Menu';
 
 import Icon from '@mdi/react'
 import { mdiLanguageHtml5, mdiLanguageCss3, mdiLanguageJavascript, mdiReact, mdiNpm, mdiGit, mdiMaterialUi } from '@mdi/js';
@@ -86,15 +85,18 @@ const technologyStack = [
 const Skills = () => {
     const [isClicked, setIsClicked] = useState(false);
     const [index, setIndex] = useState(null);
+    const [isActivePage, setIsActivePage] = useState(true);
     const page = useRef(null);
 
     useEffect(()=> {
-        gsap.from(page.current,{            
-                ease: "circ",
-                left: 0,
-                xPercent: 100,
-                duration:0.3,           
-        })
+        if(isActivePage){
+            gsap.from(page.current, {
+                ease: "none",
+                opacity:0,
+                duration: 0.5,
+            })
+            setIsActivePage(false)
+        }
     });
 
     const handleClick = (id) => {
@@ -119,7 +121,6 @@ const Skills = () => {
         <div className="skills" ref={page}>
             <section className="skills__image">
                 <section className="skills__overlay">
-                    <Menu />
                     <h1 className="skills__title">
                         Technology Stack
                     </h1>

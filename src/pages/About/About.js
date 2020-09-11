@@ -1,6 +1,5 @@
-import React, {useRef, useEffect} from 'react';
+import React, { useRef, useEffect } from 'react';
 
-import Menu from '../../components/menu/Menu';
 import './_about.scss';
 
 import { gsap } from "gsap";
@@ -8,12 +7,11 @@ import { gsap } from "gsap";
 const About = () => {
     const page = useRef(null);
 
-    useEffect(()=> {
-        gsap.from(page.current,{            
-                ease: "circ",
-                left: 0,
-                xPercent: 100,
-                duration:0.3,           
+    useEffect(() => {
+        gsap.from(page.current, {
+            ease: "none",
+            opacity:0,
+            duration: 0.5,
         })
     });
 
@@ -21,7 +19,6 @@ const About = () => {
         <div className="about" ref={page}>
             <section className="about__image">
                 <section className="about__overlay">
-                    <Menu />
                     <h1 className="about__title">
                         About
                     </h1>
