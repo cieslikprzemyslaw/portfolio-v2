@@ -13,7 +13,7 @@ const Menu = () => {
     window.addEventListener("scroll", changeBackground);
 
     return (
-        <nav className={isActiveNavbar ? "menu--active":"menu"}>
+        <nav className={isActiveNavbar ? "menu--active":"menu" }>
             <ul className="menu__list">
                 <li className="menu__item"><NavLink className="menu__link" exact to="/" >Home</NavLink></li>
                 <li className="menu__item"><NavLink className="menu__link" to="/skills" >Skills</NavLink></li>
