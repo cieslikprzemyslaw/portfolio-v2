@@ -10,7 +10,7 @@ const About = () => {
     useEffect(() => {
         gsap.from(page.current, {
             ease: "none",
-            opacity:0,
+            opacity: 0,
             duration: 0.5,
         })
     });
@@ -19,9 +19,11 @@ const About = () => {
         <div className="about" ref={page}>
             <section className="about__image">
                 <section className="about__overlay">
-                    <h1 className="about__title">
-                        About
+                    <section className="about__text">
+                        <h1 className="about__title">
+                            About
                     </h1>
+                    </section>
                 </section>
             </section>
             <section className="about__description">

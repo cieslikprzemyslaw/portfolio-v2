@@ -66,9 +66,11 @@ const Projects = () => {
         <div className="projects" ref={isActivePage ? page:null}>
             <section className="projects__image">
                 <section className="projects__overlay">
+                    <section className="projects__text">
                     <h1 className="projects__title">
                         Projects
                     </h1>
+                    </section>
                 </section>
             </section>
             <main className="projects__slider">

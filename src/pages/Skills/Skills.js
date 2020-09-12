@@ -88,11 +88,11 @@ const Skills = () => {
     const [isActivePage, setIsActivePage] = useState(true);
     const page = useRef(null);
 
-    useEffect(()=> {
-        if(isActivePage){
+    useEffect(() => {
+        if (isActivePage) {
             gsap.from(page.current, {
                 ease: "none",
-                opacity:0,
+                opacity: 0,
                 duration: 0.5,
             })
             setIsActivePage(false)
@@ -121,9 +121,11 @@ const Skills = () => {
         <div className="skills" ref={page}>
             <section className="skills__image">
                 <section className="skills__overlay">
-                    <h1 className="skills__title">
-                        Technology Stack
-                    </h1>
+                    <section className="skills__text">
+                        <h1 className="skills__title" >
+                            Technology Stack
+                        </h1>
+                    </section>
                 </section>
             </section>
             <section className="skills__section">

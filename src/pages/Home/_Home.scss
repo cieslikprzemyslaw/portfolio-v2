@@ -5,6 +5,9 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
+    @media (min-width: 1024px) {
+        background-image: url(../../utils/images/glasgow_laptops.jpg);
+    }
     &__overlay{
         height: 100vh;
         background-color: rgba(0, 0, 0, 0.35);
@@ -13,14 +16,15 @@
         width: 100%;
         position: absolute;
         top: 50%;
-        left: 0;
-        transform: translateY(-50%);
+        left: 50%;
+        transform: translate(-50%,-50%);
     }
     &__welcome{
         width: 100%;
         text-align: center;
         color: rgb(255, 255, 255);
         font-size: 25px;
+        margin: 0 auto;
         @media (min-width: 740px) {
             font-size: 35px;
         }

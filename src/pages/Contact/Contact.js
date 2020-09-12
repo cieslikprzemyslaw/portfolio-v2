@@ -1,4 +1,4 @@
-import React, {useRef, useEffect} from 'react';
+import React, { useRef, useEffect } from 'react';
 
 import './_contact.scss';
 
@@ -10,10 +10,10 @@ import { gsap } from "gsap";
 const Contact = () => {
     const page = useRef(null);
 
-    useEffect(()=> {
+    useEffect(() => {
         gsap.from(page.current, {
             ease: "none",
-            opacity:0,
+            opacity: 0,
             duration: 0.5,
         })
     });
@@ -22,9 +22,11 @@ const Contact = () => {
         <div className="contact" ref={page}>
             <section className="contact__image">
                 <section className="contact__overlay">
-                    <h1 className="contact__title">
-                        Contact
-                    </h1>
+                    <section className="contact__text">
+                        <h1 className="contact__title">
+                            Contact
+                        </h1>
+                    </section>
                 </section>
             </section>
             <section className="contact__info">
@@ -53,6 +55,7 @@ const Contact = () => {
                 <section className="contact__icons">
                     <a href="https://www.facebook.com/profile.php?id=100000375258188">
                         <Icon
+                            className="contact__icon"
                             path={mdiFacebook}
                             title="Facebook"
                             size={3}
@@ -61,6 +64,7 @@ const Contact = () => {
                     </a>
                     <a href="https://github.com/cieslikprzemyslaw">
                         <Icon
+                            className="contact__icon"
                             path={mdiGithub}
                             title="Github"
                             size={3}
@@ -69,6 +73,7 @@ const Contact = () => {
                     </a>
                     <a href="https://www.linkedin.com/in/przemyslaw-cieslik-b90457169/">
                         <Icon
+                            className="contact__icon"
                             path={mdiLinkedin}
                             title="Linkedin"
                             size={3}

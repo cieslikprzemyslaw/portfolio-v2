@@ -5,18 +5,29 @@
     align-content: space-between;
     overflow-x: hidden;
     &__image{
-        background-image: url(../../utils/images/projects-mobile.jpg);
+        background-image: url(../../utils/images/projects_mobile.jpg);
         width: 100%;
         height: 290px;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        @media (min-width: 1024px) {
+            background-image: url(../../utils/images/projects_laptops.jpg);
+        }
+        @media (min-width: 1440px) {
+            background-image: url(../../utils/images/projects_desktop.jpg);
+        }
     }
     &__overlay{
-        position: relative;
         width: 100%;
         height: 100%;
         background-color: rgba($color: #000000, $alpha: 0.5);
+    }
+    &__text{
+        position: relative;
+        max-width: 1440px;
+        height: 100%;
+        margin: 0 auto;
     }
     &__title{
         position: absolute;
@@ -29,7 +40,8 @@
         }
     }
     &__slider{
-        margin: 20px 0;
+        max-width: 1440px;
+        margin: 0 auto;
         position: relative;
     }
     &__description{
