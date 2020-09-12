@@ -21,6 +21,9 @@
         text-align: center;
         color: rgb(255, 255, 255);
         font-size: 25px;
+        @media (min-width: 740px) {
+            font-size: 35px;
+        }
     }
     &__description{
         display: block;
@@ -35,6 +38,9 @@
         margin: 0 auto;
         color: white;
         font-size: 17px;
+        @media (min-width: 740px) {
+            font-size: 23px;
+        }
     }
     &__loader{
         display: flex;

@@ -20,9 +20,15 @@
         left: 10px;
         font-size: 25px;
         color: white;
+        @media (min-width: 740px) {
+            font-size: 35px;
+        }
     }
     &__description{
         margin: 20px 5px;
         text-align: justify;
+        @media (min-width: 740px) {
+            font-size: 1.2rem;
+        }
     }
 }
