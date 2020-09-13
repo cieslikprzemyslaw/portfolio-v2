@@ -20,7 +20,7 @@ const Home = () => {
 
     useEffect(() => {
         gsap.from(animate.current, {
-            duration: 1,
+            duration: 2,
             opacity: 0,
             ease: 'none',
         })

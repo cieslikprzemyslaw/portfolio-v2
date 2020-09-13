@@ -97,7 +97,7 @@ const Skills = () => {
             })
             setIsActivePage(false)
         }
-    });
+    },[isActivePage]);
 
     const handleClick = (id) => {
         setIsClicked(true)

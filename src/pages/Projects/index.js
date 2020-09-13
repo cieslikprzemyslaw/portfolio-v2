@@ -50,7 +50,7 @@ const Projects = () => {
             })
             setIsActivePage(false)
         }
-    });
+    }, [isActivePage]);
 
     const handleClickRight = () => {
         setIndex(index => index + 1);
@@ -74,7 +74,7 @@ const Projects = () => {
                 </section>
             </section>
             <main className="projects__slider">
-                <section className="projects__arrow-right" onClick={handleClickRight}>
+            <section className="projects__arrow-right" onClick={handleClickRight}>
                     <Icon
                         size={2}
                         style={{ color: "white" }}
