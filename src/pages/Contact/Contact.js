@@ -6,6 +6,7 @@ import { TextField, Button } from '@material-ui/core';
 import Icon from '@mdi/react'
 import { mdiFacebook, mdiGithub, mdiLinkedin } from '@mdi/js';
 import { gsap } from "gsap";
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
     const page = useRef(null);
@@ -17,6 +18,18 @@ const Contact = () => {
             duration: 0.5,
         })
     });
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm('service_q0ccnjc', 'template_8unzusa', e.target, 'user_cP906xejCev8XULACmF7i')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+            e.target.reset();
+    }
 
     return (
         <div className="contact" ref={page}>
@@ -33,21 +46,22 @@ const Contact = () => {
                 <h2 className="contact__subtitle">
                     Want to get in touch?
                 </h2>
-                <form action="mailto:cprzemek91@hotmail.com" method="post" encType="text/plain" className="contact__form">
+                <form onSubmit={sendEmail} className="contact__form">
                     <TextField
                         htmlFor="name"
-                        style={{ width: "100%" }} id="standard-basic" label="name" />
+                        style={{ width: "100%" }} id="standard-basic" label="name" name="name"/>
                     <TextField
                         htmlFor="e-mail"
-                        style={{ width: "100%" }} id="standard-basic" label="e-mail" />
+                        style={{ width: "100%" }} id="standard-basic" label="e-mail" name="email"/>
                     <TextField
                         htmlFor="text"
                         style={{ margin: "20px auto", width: "100%" }}
                         id="outlined-multiline-static"
-                        label="Text"
+                        label="message"
                         multiline
                         rows={5}
                         variant="outlined"
+                        name="message"
                     />
                     <Button variant="contained" color="primary"
                         type="submit">Send</Button>
