@@ -95,4 +95,13 @@
         z-index: 2;
         text-align: center;
     }
+    &__links{
+        display: flex;
+        align-content: space-between;
+        justify-content: space-between;
+        margin: 20px 30px;
+    }
+    &__url{
+        text-align: center;
+    }
 }
