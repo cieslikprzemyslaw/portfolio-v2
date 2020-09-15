@@ -12,7 +12,7 @@ const Home = () => {
     const changeTitles = () => {
         setTitlesIndex(titlesIndex => {
             if (titlesIndex === titles.length - 1) return setTitlesIndex(0);
-            if (titlesIndex < titles.length) return(setTitlesIndex(titlesIndex => titlesIndex+1))
+            if (titlesIndex < titles.length - 1) return(setTitlesIndex(titlesIndex+1))
         });
        
 
@@ -20,7 +20,7 @@ const Home = () => {
 
     useEffect(() => {
         gsap.from(animate.current, {
-            duration: 2,
+            duration: 0.5,
             opacity: 0,
             ease: 'none',
         })

@@ -49,6 +49,10 @@
         }
     }
     &__subtitle{
-        margin: 20px 0;
+        margin: 20px 10px;
+    }
+    &__text{
+        margin: 20px 10px;
+        line-height: 160%;
     }
 }
