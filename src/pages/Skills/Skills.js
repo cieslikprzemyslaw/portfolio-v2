@@ -93,14 +93,24 @@ const Skills = () => {
     const [isClicked, setIsClicked] = useState(false);
     const [index, setIndex] = useState(null);
     const [isActivePage, setIsActivePage] = useState(true);
-    const page = useRef(null);
+    const pageHeader = useRef(null);
+    const pageContent = useRef(null);
 
     useEffect(() => {
         if (isActivePage) {
-            gsap.from(page.current, {
+            gsap.from(pageHeader.current, {
                 ease: "none",
-                opacity: 0,
-                duration: 0.5,
+                top:0,
+                left:0,
+                translateX: "100vw",
+                duration:0.8,
+            })
+            gsap.from(pageContent.current, {
+                ease: "none",
+                top:0,
+                left:0,
+                translateX: "-100vw",
+                duration:0.8,
             })
             setIsActivePage(false)
         }
@@ -125,8 +135,8 @@ const Skills = () => {
 
 
     return (
-        <div className="skills" ref={page}>
-            <section className="skills__image">
+        <div className="skills">
+            <section className="skills__image"  ref={pageHeader}>
                 <section className="skills__overlay">
                     <section className="skills__text">
                         <h1 className="skills__title" >
@@ -135,7 +145,7 @@ const Skills = () => {
                     </section>
                 </section>
             </section>
-            <section className="skills__section">
+            <section className="skills__section"  ref={pageContent}>
                 <section className="skills__description">
                     {isClicked ? showTechnologyDescription() : <p className="skills__description-null">Please click on a Icon</p>}
                 </section>

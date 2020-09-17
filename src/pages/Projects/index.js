@@ -39,14 +39,24 @@ const projectsArray = [
 const Projects = () => {
     const [index, setIndex] = useState(0)
     const [isActivePage, setIsActivePage] = useState(true);
-    const page = useRef(null);
+    const pageHeader = useRef(null);
+    const pageContent = useRef(null);
 
     useEffect(() => {
         if (isActivePage) {
-            gsap.from(page.current, {
+            gsap.from(pageHeader.current, {
                 ease: "none",
-                opacity: 0,
-                duration: 0.5,
+                top:0,
+                left:0,
+                translateX: "100vw",
+                duration:0.8,
+            })
+            gsap.from(pageContent.current, {
+                ease: "none",
+                top:0,
+                left:0,
+                translateX: "-100vw",
+                duration:0.8,
             })
             setIsActivePage(false)
         }
@@ -63,8 +73,8 @@ const Projects = () => {
     }
 
     return (
-        <div className="projects" ref={isActivePage ? page : null}>
-            <section className="projects__image">
+        <div className="projects">
+            <section className="projects__image" ref={pageHeader}>
                 <section className="projects__overlay">
                     <section className="projects__text">
                         <h1 className="projects__title">
@@ -73,7 +83,7 @@ const Projects = () => {
                     </section>
                 </section>
             </section>
-            <main className="projects__slider">
+            <main className="projects__slider" ref={pageContent}>
                 <section className="projects__arrow-right" onClick={handleClickRight}>
                     <Icon
                         size={2}

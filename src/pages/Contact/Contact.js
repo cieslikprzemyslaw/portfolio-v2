@@ -9,13 +9,23 @@ import { gsap } from "gsap";
 import emailjs from 'emailjs-com';
 
 const Contact = () => {
-    const page = useRef(null);
+    const pageHeader = useRef(null);
+    const pageContent = useRef(null);
 
     useEffect(() => {
-        gsap.from(page.current, {
+        gsap.from(pageHeader.current, {
             ease: "none",
-            opacity: 0,
-            duration: 0.5,
+            top:0,
+            left:0,
+            translateX: "100vw",
+            duration:0.8,
+        })
+        gsap.from(pageContent.current, {
+            ease: "none",
+            top:0,
+            left:0,
+            translateX: "-100vw",
+            duration:0.8,
         })
     });
 
@@ -32,8 +42,8 @@ const Contact = () => {
     }
 
     return (
-        <div className="contact" ref={page}>
-            <section className="contact__image">
+        <div className="contact" >
+            <section className="contact__image" ref={pageHeader}>
                 <section className="contact__overlay">
                     <section className="contact__text">
                         <h1 className="contact__title">
@@ -42,7 +52,7 @@ const Contact = () => {
                     </section>
                 </section>
             </section>
-            <section className="contact__info">
+            <section className="contact__info" ref={pageContent}>
                 <h2 className="contact__subtitle">
                     Want to get in touch?
                 </h2>

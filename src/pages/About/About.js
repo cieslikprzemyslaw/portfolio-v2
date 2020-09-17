@@ -5,19 +5,29 @@ import './_about.scss';
 import { gsap } from "gsap";
 
 const About = () => {
-    const page = useRef(null);
+    const pageHeader = useRef(null);
+    const pageContent = useRef(null);
 
     useEffect(() => {
-        gsap.from(page.current, {
+        gsap.from(pageHeader.current, {
             ease: "none",
-            opacity: 0,
-            duration: 0.5,
+            top:0,
+            left:0,
+            translateX: "100vw",
+            duration:0.8,
+        })
+        gsap.from(pageContent.current, {
+            ease: "none",
+            top:0,
+            left:0,
+            translateX: "-100vw",
+            duration:0.8,
         })
     });
 
     return (
-        <div className="about" ref={page}>
-            <section className="about__image">
+        <div className="about">
+            <section className="about__image" ref={pageHeader}>
                 <section className="about__overlay">
                     <section className="about__text">
                         <h1 className="about__title">
@@ -26,7 +36,7 @@ const About = () => {
                     </section>
                 </section>
             </section>
-            <section className="about__description">
+            <section className="about__description" ref={pageContent}>
                 <h2 className="about__subtitle">Hey! </h2>
                 <p className="about__me">I am Przemysław Cieślik, I was born and raised in Poland and have been living in Scotland with my girlfriend and our beloved daughter for the past couple of years. I am an ambitious person who puts family and personal development first.</p>
                 <h2 className="about__subtitle">How did you get where you are now?</h2>
