@@ -56,7 +56,7 @@ const technologyStack = [
         icon: mdiNpm,
         name: "NPM",
         description: [
-            'Basic knowladge how to work with NPM and how to use it.',
+            'Basic knowledge how to work with NPM and how to use it.',
         ],
         color: "C53635",
     },
@@ -65,7 +65,7 @@ const technologyStack = [
         icon: mdiGit,
         name: "GIT",
         description: [
-            'Basic knowledge about commands to work with my repositories and repositories other people. ',
+            'Basic knowledge about commands to work with my repositories and repositories of other people. ',
         ],
         color: "E94F32",
     },
@@ -74,7 +74,7 @@ const technologyStack = [
         icon: mdiMaterialUi,
         name: "Material UI",
         description: [
-            'Knowladge how to work with documentation and components from Material UI'
+            'Knowledge how to work with documentation and components from Material UI'
         ],
         color: "007DC5",
     },
@@ -83,7 +83,7 @@ const technologyStack = [
         icon: mdiAdobe,
         name: "Adobe Xd",
         description: [
-            'Basic knowladge how to create mock up'
+            'Basic knowledge how to create mock up'
         ],
         color: "ED1C24",
     },
