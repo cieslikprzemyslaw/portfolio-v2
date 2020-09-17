@@ -3,7 +3,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import './_skills.scss';
 
 import Icon from '@mdi/react'
-import { mdiLanguageHtml5, mdiLanguageCss3, mdiLanguageJavascript, mdiReact, mdiNpm, mdiGit, mdiMaterialUi } from '@mdi/js';
+import { mdiLanguageHtml5, mdiLanguageCss3, mdiLanguageJavascript, mdiReact, mdiNpm, mdiGit, mdiMaterialUi,mdiAdobe} from '@mdi/js';
 import { gsap } from "gsap";
 
 const technologyStack = [
@@ -26,7 +26,6 @@ const technologyStack = [
             'Good background ',
             'Animation with use @keyframes',
             'Flexbox',
-            'CSS Grid',
         ],
         color: "2465F1",
     },
@@ -39,7 +38,6 @@ const technologyStack = [
             'ES6',
             'Connect with API (Fetch method)',
             'Knowladge how work async and sync',
-            'Good knowledge of the syntax',
         ],
         color: "F0D91D",
     },
@@ -48,7 +46,7 @@ const technologyStack = [
         icon: mdiReact,
         name: "React",
         description: [
-            'React router',
+            'React Router',
             'React Hooks',
         ],
         color: "5ED4F4",
@@ -79,6 +77,15 @@ const technologyStack = [
             'Knowladge how to work with documentation and components from Material UI'
         ],
         color: "007DC5",
+    },
+    {
+        id: 7,
+        icon: mdiAdobe,
+        name: "Adobe Xd",
+        description: [
+            'Basic knowladge how to create mock up'
+        ],
+        color: "ED1C24",
     },
 ]
 
