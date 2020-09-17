@@ -37,7 +37,7 @@ const technologyStack = [
             'Closures and Hoisting',
             'ES6',
             'Connect with API (Fetch method)',
-            'Knowladge how work async and sync',
+            'Knowledge how work async and sync',
         ],
         color: "F0D91D",
     },
