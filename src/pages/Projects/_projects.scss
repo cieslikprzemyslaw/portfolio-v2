@@ -65,14 +65,14 @@
     }
     &__description-slider{
         margin: 0 5px;
-        max-width: 100vw;
         font-size: 20px;
+        text-align: justify;
         @media (min-width: 740px) {
             font-size: 25px;
         }
     }
     &__arrow-right{
-        position: absolute;
+        position: fixed;
         top: 50%;
         right: 0;
         text-align: center;
@@ -84,7 +84,7 @@
         z-index: 2;
     }
     &__arrow-left{
-        position: absolute;
+        position: fixed;
         top: 50%;
         left: 0;
         width: 25vw;
@@ -103,5 +103,11 @@
     }
     &__url{
         text-align: center;
+    }
+    &__image-wrapper{
+        text-align: center;
+    }
+    &__description-wrapper{
+        max-width: 1440px;
     }
 }
