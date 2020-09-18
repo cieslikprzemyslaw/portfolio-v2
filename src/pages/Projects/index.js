@@ -66,14 +66,6 @@ const projectsArray = [
         webUrl: "",
         imgUrl: Weather,
     },
-    {
-        id: 7,
-        name: "WebPack - basic tool kit",
-        description: "example4 description text",
-        githubUrl: "https://github.com/cieslikprzemyslaw/webpack-basic-toolkit",
-        webUrl: "",
-        imgUrl: Weather,
-    },
 ]
 
 const Projects = () => {
