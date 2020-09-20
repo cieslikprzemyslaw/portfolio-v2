@@ -13,23 +13,33 @@ const projectsArray = [
     {
         id: 0,
         name: "Circles-Web",
-        description: "The second project, I wanted to do something that can be useful for learning. I chose the Pomodoro clock. What have I learned:How to work with hooks.How to work with useEffect and what is it.The second project, I wanted to do something that can be useful for learning. I chose the Pomodoro clock. What have I learned:How to work with hooks.How to work with useEffect and what is it.The second project, I wanted to do something that can be useful for learning. I chose the Pomodoro clock. What have I learned:How to work with hooks.How to work with useEffect and what is it.",
-        githubUrl: "https://github.com/cieslikprzemyslaw/pomodoro",
-        webUrl: "",
+        description: [
+            "The first project that does not write alone and I was invited to it. It is a messenger. Written in React using Typescript",
+            "Currently, I am responsible for the appearance of the news and the landing skeleton. I made a skeleton for loading rooms after logging into the application.",
+            "Everyone in the group does something in their spare time between work and their projects. After the portfolio website, I plan to devote my free time to the further development of my application and my application. By spending more time on this messenger.",
+            "One day there will be a stable version at the moment there is no URL for the page.",
+        ],
+        githubUrl: "https://github.com/DRFR0ST/circles-web",
+        webUrl: null,
         imgUrl: Pomodoro,
     },
     {
         id: 1,
         name: "This website Portfolio v2",
-        description: "The second project, I wanted to do something that can be useful for learning. I chose the Pomodoro clock. What have I learned:How to work with hooks.How to work with useEffect and what is it.The second project, I wanted to do something that can be useful for learning. I chose the Pomodoro clock. What have I learned:How to work with hooks.How to work with useEffect and what is it.The second project, I wanted to do something that can be useful for learning. I chose the Pomodoro clock. What have I learned:How to work with hooks.How to work with useEffect and what is it.",
-        githubUrl: "https://github.com/cieslikprzemyslaw/pomodoro",
+        description:[
+            "I approached this project with due preparation and respect for my work.I created a mock-up and made it available for review to a few people in the industry, improved the project and made it public for Facebook programming related groups. As the project was received positively by the group that interested me, I started creating the project.",
+        ],
+        githubUrl: "https://github.com/cieslikprzemyslaw/portfolio-v2",
         webUrl: "",
         imgUrl: Pomodoro,
     },
     {
         id: 2,
         name: "Pomodoro",
-        description: "The second project, I wanted to do something that can be useful for learning. I chose the Pomodoro clock. What have I learned:How to work with hooks.How to work with useEffect and what is it.The second project, I wanted to do something that can be useful for learning. I chose the Pomodoro clock. What have I learned:How to work with hooks.How to work with useEffect and what is it.The second project, I wanted to do something that can be useful for learning. I chose the Pomodoro clock. What have I learned:How to work with hooks.How to work with useEffect and what is it.",
+        description: [
+            "The second project, I wanted to do something that can be useful for learning. I chose the Pomodoro clock. What have I learned: How to work with hooks. How to work with useEffect and what is it.The second project, I wanted to do something that can be useful for learning. I chose the Pomodoro clock.",
+            "The project isn't perfect, couples things miss like sound and little bugs in logic function (add and remove minutes), but this is my 1st project what I made alone without any course etc.",
+        ],
         githubUrl: "https://github.com/cieslikprzemyslaw/pomodoro",
         webUrl: "",
         imgUrl: Pomodoro,
@@ -37,7 +47,11 @@ const projectsArray = [
     {
         id: 3,
         name: "League Of Legends Characters Library",
-        description: "example description text",
+        description: [
+            "Before I worked with arrays with objects and I know how to work with it very well, but firebase has different structure for JSON format. ",
+            "The project was created for understanding how to iterate through the object with objects inside, how to work react-router and I wanted to do something like product list but not like everybody that why I found great API to create this app. ",
+            "League of legends library have good potential and can be great when I change couples things like check path No. in API and show the newest data. The project needs a couple of styles to look awesome. ",
+        ],
         githubUrl: "https://github.com/cieslikprzemyslaw/LegueOfLegends_Characters",
         webUrl: "",
         imgUrl: LeagueOfLegends,
@@ -45,7 +59,12 @@ const projectsArray = [
     {
         id: 4,
         name: "Weather App useing Met Office API",
-        description: "example4 description text",
+        description: [
+            "Everybody makes a weather app or most people doing that I decided to create a weather app but not like everybody with simple API. I wanted to create something different and I found Met Office forecast API.  In the project, I used 2 data.",
+            "First of them is a list of all places with the weather forecast where we need to check id for a city.",
+            "Second is for check forecast where we looking for. ",
+            "In the project, I was focused on the logical site of this app and I don't do styles. ",
+        ],
         githubUrl: "https://github.com/cieslikprzemyslaw/weatherApp-metofficeApi",
         webUrl: "",
         imgUrl: Weather,
@@ -53,7 +72,10 @@ const projectsArray = [
     {
         id: 5,
         name: "Portfolio v1",
-        description: "example4 description text",
+        description: [
+            "This project was a big defeat. I tried did the portfolio website without previous preparation mockup and what I want to show for people who read my website.",
+            "People learn from their mistakes and I learned something in this project. Preparation is essential if you want to create something good. ",
+        ],
         githubUrl: "https://github.com/cieslikprzemyslaw/PortfolioWebsite",
         webUrl: "",
         imgUrl: Weather,
@@ -61,7 +83,9 @@ const projectsArray = [
     {
         id: 6,
         name: "WebPack - basic tool kit",
-        description: "example4 description text",
+        description: [
+            "It's a basic tool kit what I created. I have hope I can use it in my 1st commercial project, but when I writing this text I waiting for customer expectations regarding the project, then I want to make a decision about what I should use to my 1st project."
+        ],
         githubUrl: "https://github.com/cieslikprzemyslaw/webpack-basic-toolkit",
         webUrl: "",
         imgUrl: Weather,
@@ -136,7 +160,11 @@ const Projects = () => {
                 <section className="projects__description-wrapper">
                     <section className="projects__description">
                         <h2 className="projects__title-slider">{projectsArray[index].name}</h2>
-                        <p className="projects__description-slider">{projectsArray[index].description}</p>
+                        <p className="projects__description-slider">{(projectsArray[index].description).map(description => {
+                            return(
+                            <p>{description}</p>
+                            )
+                        })}</p>
                     </section>
                     <section className="projects__links">
                         <section className="projects__url">
@@ -150,7 +178,7 @@ const Projects = () => {
                             </a>
                             <h3>Github</h3>
                         </section>
-                        <section className="projects__url">
+                        {projectsArray[index].webUrl ? <section className="projects__url">
                             <a href={projectsArray[index].webUrl} className="project__link">
                                 <Icon
                                     className="projects__icon"
@@ -160,7 +188,7 @@ const Projects = () => {
                                 />
                             </a>
                             <h3>Website</h3>
-                        </section>
+                        </section>: null}
                     </section>
                 </section>
 
