@@ -4,6 +4,10 @@ import './_projects.scss';
 import Pomodoro from '../../utils/projects-images/pomodoro.png';
 import LeagueOfLegends from '../../utils/projects-images/lol.png';
 import Weather from '../../utils/projects-images/weather.png';
+import Portfolio from '../../utils/projects-images/portfolio.png';
+import Portfolio2 from '../../utils/projects-images/portfolio-2.png';
+import NoImage from '../../utils/projects-images/no-image.png';
+import Circles from '../../utils/projects-images/circles.png';
 
 import Icon from '@mdi/react'
 import { mdiArrowRightThick, mdiArrowLeftThick, mdiWeb, mdiGithub } from '@mdi/js';
@@ -21,17 +25,17 @@ const projectsArray = [
         ],
         githubUrl: "https://github.com/DRFR0ST/circles-web",
         webUrl: null,
-        imgUrl: Pomodoro,
+        imgUrl: Circles,
     },
     {
         id: 1,
-        name: "This website Portfolio v2",
-        description:[
+        name: "This website Portfolio v 2.0",
+        description: [
             "I approached this project with due preparation and respect for my work.I created a mock-up and made it available for review to a few people in the industry, improved the project and made it public for Facebook programming related groups. As the project was received positively by the group that interested me, I started creating the project.",
         ],
         githubUrl: "https://github.com/cieslikprzemyslaw/portfolio-v2",
-        webUrl: "",
-        imgUrl: Pomodoro,
+        webUrl: "https://przemyslaw-portfolio.netlify.app",
+        imgUrl: Portfolio2,
     },
     {
         id: 2,
@@ -41,7 +45,7 @@ const projectsArray = [
             "The project isn't perfect, couples things miss like sound and little bugs in logic function (add and remove minutes), but this is my 1st project what I made alone without any course etc.",
         ],
         githubUrl: "https://github.com/cieslikprzemyslaw/pomodoro",
-        webUrl: "",
+        webUrl: "przemyslaw-pomodoro.netlify.app",
         imgUrl: Pomodoro,
     },
     {
@@ -53,7 +57,7 @@ const projectsArray = [
             "League of legends library have good potential and can be great when I change couples things like check path No. in API and show the newest data. The project needs a couple of styles to look awesome. ",
         ],
         githubUrl: "https://github.com/cieslikprzemyslaw/LegueOfLegends_Characters",
-        webUrl: "",
+        webUrl: "https://cieslikprzemyslaw.github.io/LegueOfLegends_Characters/",
         imgUrl: LeagueOfLegends,
     },
     {
@@ -66,19 +70,19 @@ const projectsArray = [
             "In the project, I was focused on the logical site of this app and I don't do styles. ",
         ],
         githubUrl: "https://github.com/cieslikprzemyslaw/weatherApp-metofficeApi",
-        webUrl: "",
+        webUrl: "https://cieslikprzemyslaw.github.io/weatherApp-metofficeApi/",
         imgUrl: Weather,
     },
     {
         id: 5,
-        name: "Portfolio v1",
+        name: "Portfolio v 1.0",
         description: [
             "This project was a big defeat. I tried did the portfolio website without previous preparation mockup and what I want to show for people who read my website.",
             "People learn from their mistakes and I learned something in this project. Preparation is essential if you want to create something good. ",
         ],
         githubUrl: "https://github.com/cieslikprzemyslaw/PortfolioWebsite",
-        webUrl: "",
-        imgUrl: Weather,
+        webUrl: "https://przemyslawcieslik-portfolio.netlify.app/",
+        imgUrl: Portfolio,
     },
     {
         id: 6,
@@ -87,8 +91,8 @@ const projectsArray = [
             "It's a basic tool kit what I created. I have hope I can use it in my 1st commercial project, but when I writing this text I waiting for customer expectations regarding the project, then I want to make a decision about what I should use to my 1st project."
         ],
         githubUrl: "https://github.com/cieslikprzemyslaw/webpack-basic-toolkit",
-        webUrl: "",
-        imgUrl: Weather,
+        webUrl: null,
+        imgUrl: NoImage,
     },
 ]
 
@@ -140,19 +144,19 @@ const Projects = () => {
                 </section>
             </section>
             <section className="projects__arrow-right" onClick={handleClickRight}>
-                    <Icon
-                        size={2}
-                        style={{ color: "white" }}
-                        path={mdiArrowRightThick}
-                    />
-                </section>
-                <section className="projects__arrow-left" onClick={handleClickLeft}>
-                    <Icon
-                        size={2}
-                        style={{ color: "white" }}
-                        path={mdiArrowLeftThick}
-                    />
-                </section>
+                <Icon
+                    size={2}
+                    style={{ color: "white" }}
+                    path={mdiArrowRightThick}
+                />
+            </section>
+            <section className="projects__arrow-left" onClick={handleClickLeft}>
+                <Icon
+                    size={2}
+                    style={{ color: "white" }}
+                    path={mdiArrowLeftThick}
+                />
+            </section>
             <main className="projects__slider" ref={pageContent}>
                 <section className="projects__image-wrapper" style={{ margin: "0 auto" }}>
                     <img className="projects__main-image" src={projectsArray[index].imgUrl} alt={projectsArray[index].name} style={{ maxHeight: "40vh", maxWidth: "100vw" }} />
@@ -161,8 +165,8 @@ const Projects = () => {
                     <section className="projects__description">
                         <h2 className="projects__title-slider">{projectsArray[index].name}</h2>
                         <p className="projects__description-slider">{(projectsArray[index].description).map(description => {
-                            return(
-                            <p>{description}</p>
+                            return (
+                                <p>{description}</p>
                             )
                         })}</p>
                     </section>
@@ -188,7 +192,7 @@ const Projects = () => {
                                 />
                             </a>
                             <h3>Website</h3>
-                        </section>: null}
+                        </section> : null}
                     </section>
                 </section>
 
